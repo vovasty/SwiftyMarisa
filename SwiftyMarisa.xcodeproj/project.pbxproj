@@ -1,0 +1,938 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD40502E1CA39F4800BB570B /* Marisa.h in Headers */ = {isa = PBXBuildFile; fileRef = CD40502D1CA39F4800BB570B /* Marisa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD40502F1CA39F4800BB570B /* Marisa.h in Headers */ = {isa = PBXBuildFile; fileRef = CD40502D1CA39F4800BB570B /* Marisa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD81C63F1CA34CD20039E429 /* Marisa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD81C62E1CA34BD60039E429 /* Marisa.framework */; };
+		CD89AFE81CA34DAB00922CA3 /* Marisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF63AF51CA3151300EABC54 /* Marisa.swift */; };
+		CD89B01B1CA34DE700922CA3 /* agent.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89AFEA1CA34DE700922CA3 /* agent.cc */; };
+		CD89B01C1CA34DE700922CA3 /* agent.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89AFEA1CA34DE700922CA3 /* agent.cc */; };
+		CD89B01D1CA34DE700922CA3 /* agent.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFEB1CA34DE700922CA3 /* agent.h */; };
+		CD89B01E1CA34DE700922CA3 /* agent.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFEB1CA34DE700922CA3 /* agent.h */; };
+		CD89B01F1CA34DE700922CA3 /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFEC1CA34DE700922CA3 /* base.h */; };
+		CD89B0201CA34DE700922CA3 /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFEC1CA34DE700922CA3 /* base.h */; };
+		CD89B0211CA34DE700922CA3 /* exception.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFED1CA34DE700922CA3 /* exception.h */; };
+		CD89B0221CA34DE700922CA3 /* exception.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFED1CA34DE700922CA3 /* exception.h */; };
+		CD89B0231CA34DE700922CA3 /* sort.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF01CA34DE700922CA3 /* sort.h */; };
+		CD89B0241CA34DE700922CA3 /* sort.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF01CA34DE700922CA3 /* sort.h */; };
+		CD89B0251CA34DE700922CA3 /* algorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF11CA34DE700922CA3 /* algorithm.h */; };
+		CD89B0261CA34DE700922CA3 /* algorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF11CA34DE700922CA3 /* algorithm.h */; };
+		CD89B0271CA34DE700922CA3 /* intrin.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF21CA34DE700922CA3 /* intrin.h */; };
+		CD89B0281CA34DE700922CA3 /* intrin.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF21CA34DE700922CA3 /* intrin.h */; };
+		CD89B0291CA34DE700922CA3 /* mapper.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89AFF41CA34DE700922CA3 /* mapper.cc */; };
+		CD89B02A1CA34DE700922CA3 /* mapper.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89AFF41CA34DE700922CA3 /* mapper.cc */; };
+		CD89B02B1CA34DE700922CA3 /* mapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF51CA34DE700922CA3 /* mapper.h */; };
+		CD89B02C1CA34DE700922CA3 /* mapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF51CA34DE700922CA3 /* mapper.h */; };
+		CD89B02D1CA34DE700922CA3 /* reader.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89AFF61CA34DE700922CA3 /* reader.cc */; };
+		CD89B02E1CA34DE700922CA3 /* reader.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89AFF61CA34DE700922CA3 /* reader.cc */; };
+		CD89B02F1CA34DE700922CA3 /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF71CA34DE700922CA3 /* reader.h */; };
+		CD89B0301CA34DE700922CA3 /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF71CA34DE700922CA3 /* reader.h */; };
+		CD89B0311CA34DE700922CA3 /* writer.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89AFF81CA34DE700922CA3 /* writer.cc */; };
+		CD89B0321CA34DE700922CA3 /* writer.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89AFF81CA34DE700922CA3 /* writer.cc */; };
+		CD89B0331CA34DE700922CA3 /* writer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF91CA34DE700922CA3 /* writer.h */; };
+		CD89B0341CA34DE700922CA3 /* writer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFF91CA34DE700922CA3 /* writer.h */; };
+		CD89B0351CA34DE700922CA3 /* io.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFFA1CA34DE700922CA3 /* io.h */; };
+		CD89B0361CA34DE700922CA3 /* io.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFFA1CA34DE700922CA3 /* io.h */; };
+		CD89B0371CA34DE700922CA3 /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFFC1CA34DE700922CA3 /* cache.h */; };
+		CD89B0381CA34DE700922CA3 /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFFC1CA34DE700922CA3 /* cache.h */; };
+		CD89B0391CA34DE700922CA3 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFFD1CA34DE700922CA3 /* config.h */; };
+		CD89B03A1CA34DE700922CA3 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFFD1CA34DE700922CA3 /* config.h */; };
+		CD89B03B1CA34DE700922CA3 /* entry.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFFE1CA34DE700922CA3 /* entry.h */; };
+		CD89B03C1CA34DE700922CA3 /* entry.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFFE1CA34DE700922CA3 /* entry.h */; };
+		CD89B03D1CA34DE700922CA3 /* header.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFFF1CA34DE700922CA3 /* header.h */; };
+		CD89B03E1CA34DE700922CA3 /* header.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89AFFF1CA34DE700922CA3 /* header.h */; };
+		CD89B03F1CA34DE700922CA3 /* history.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0001CA34DE700922CA3 /* history.h */; };
+		CD89B0401CA34DE700922CA3 /* history.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0001CA34DE700922CA3 /* history.h */; };
+		CD89B0411CA34DE700922CA3 /* key.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0011CA34DE700922CA3 /* key.h */; };
+		CD89B0421CA34DE700922CA3 /* key.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0011CA34DE700922CA3 /* key.h */; };
+		CD89B0431CA34DE700922CA3 /* louds-trie.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89B0021CA34DE700922CA3 /* louds-trie.cc */; };
+		CD89B0441CA34DE700922CA3 /* louds-trie.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89B0021CA34DE700922CA3 /* louds-trie.cc */; };
+		CD89B0451CA34DE700922CA3 /* louds-trie.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0031CA34DE700922CA3 /* louds-trie.h */; };
+		CD89B0461CA34DE700922CA3 /* louds-trie.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0031CA34DE700922CA3 /* louds-trie.h */; };
+		CD89B0471CA34DE700922CA3 /* range.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0041CA34DE700922CA3 /* range.h */; };
+		CD89B0481CA34DE700922CA3 /* range.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0041CA34DE700922CA3 /* range.h */; };
+		CD89B0491CA34DE700922CA3 /* state.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0051CA34DE700922CA3 /* state.h */; };
+		CD89B04A1CA34DE700922CA3 /* state.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0051CA34DE700922CA3 /* state.h */; };
+		CD89B04B1CA34DE700922CA3 /* tail.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89B0061CA34DE700922CA3 /* tail.cc */; };
+		CD89B04C1CA34DE700922CA3 /* tail.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89B0061CA34DE700922CA3 /* tail.cc */; };
+		CD89B04D1CA34DE700922CA3 /* tail.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0071CA34DE700922CA3 /* tail.h */; };
+		CD89B04E1CA34DE700922CA3 /* tail.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0071CA34DE700922CA3 /* tail.h */; };
+		CD89B04F1CA34DE700922CA3 /* trie.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0081CA34DE700922CA3 /* trie.h */; };
+		CD89B0501CA34DE700922CA3 /* trie.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0081CA34DE700922CA3 /* trie.h */; };
+		CD89B0511CA34DE700922CA3 /* bit-vector.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89B00A1CA34DE700922CA3 /* bit-vector.cc */; };
+		CD89B0521CA34DE700922CA3 /* bit-vector.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89B00A1CA34DE700922CA3 /* bit-vector.cc */; };
+		CD89B0531CA34DE700922CA3 /* bit-vector.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B00B1CA34DE700922CA3 /* bit-vector.h */; };
+		CD89B0541CA34DE700922CA3 /* bit-vector.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B00B1CA34DE700922CA3 /* bit-vector.h */; };
+		CD89B0551CA34DE700922CA3 /* flat-vector.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B00C1CA34DE700922CA3 /* flat-vector.h */; };
+		CD89B0561CA34DE700922CA3 /* flat-vector.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B00C1CA34DE700922CA3 /* flat-vector.h */; };
+		CD89B0571CA34DE700922CA3 /* pop-count.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B00D1CA34DE700922CA3 /* pop-count.h */; };
+		CD89B0581CA34DE700922CA3 /* pop-count.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B00D1CA34DE700922CA3 /* pop-count.h */; };
+		CD89B0591CA34DE700922CA3 /* rank-index.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B00E1CA34DE700922CA3 /* rank-index.h */; };
+		CD89B05A1CA34DE700922CA3 /* rank-index.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B00E1CA34DE700922CA3 /* rank-index.h */; };
+		CD89B05B1CA34DE700922CA3 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B00F1CA34DE700922CA3 /* vector.h */; };
+		CD89B05C1CA34DE700922CA3 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B00F1CA34DE700922CA3 /* vector.h */; };
+		CD89B05D1CA34DE700922CA3 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0101CA34DE700922CA3 /* vector.h */; };
+		CD89B05E1CA34DE700922CA3 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0101CA34DE700922CA3 /* vector.h */; };
+		CD89B05F1CA34DE700922CA3 /* iostream.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0111CA34DE700922CA3 /* iostream.h */; };
+		CD89B0601CA34DE700922CA3 /* iostream.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0111CA34DE700922CA3 /* iostream.h */; };
+		CD89B0611CA34DE700922CA3 /* key.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0121CA34DE700922CA3 /* key.h */; };
+		CD89B0621CA34DE700922CA3 /* key.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0121CA34DE700922CA3 /* key.h */; };
+		CD89B0631CA34DE700922CA3 /* keyset.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89B0131CA34DE700922CA3 /* keyset.cc */; };
+		CD89B0641CA34DE700922CA3 /* keyset.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89B0131CA34DE700922CA3 /* keyset.cc */; };
+		CD89B0651CA34DE700922CA3 /* keyset.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0141CA34DE700922CA3 /* keyset.h */; };
+		CD89B0661CA34DE700922CA3 /* keyset.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0141CA34DE700922CA3 /* keyset.h */; };
+		CD89B0671CA34DE700922CA3 /* query.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0151CA34DE700922CA3 /* query.h */; };
+		CD89B0681CA34DE700922CA3 /* query.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0151CA34DE700922CA3 /* query.h */; };
+		CD89B0691CA34DE700922CA3 /* scoped-array.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0161CA34DE700922CA3 /* scoped-array.h */; };
+		CD89B06A1CA34DE700922CA3 /* scoped-array.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0161CA34DE700922CA3 /* scoped-array.h */; };
+		CD89B06B1CA34DE700922CA3 /* scoped-ptr.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0171CA34DE700922CA3 /* scoped-ptr.h */; };
+		CD89B06C1CA34DE700922CA3 /* scoped-ptr.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B0171CA34DE700922CA3 /* scoped-ptr.h */; };
+		CD89B06F1CA34DE700922CA3 /* trie.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89B0191CA34DE700922CA3 /* trie.cc */; };
+		CD89B0701CA34DE700922CA3 /* trie.cc in Sources */ = {isa = PBXBuildFile; fileRef = CD89B0191CA34DE700922CA3 /* trie.cc */; };
+		CD89B0711CA34DE700922CA3 /* trie.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B01A1CA34DE700922CA3 /* trie.h */; };
+		CD89B0721CA34DE700922CA3 /* trie.h in Headers */ = {isa = PBXBuildFile; fileRef = CD89B01A1CA34DE700922CA3 /* trie.h */; };
+		CD89B0741CA34F3D00922CA3 /* wrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CDF63AF31CA3151300EABC54 /* wrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD89B0761CA34F6C00922CA3 /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDF63AF41CA3151300EABC54 /* wrapper.cpp */; };
+		CD89B0771CA34FAA00922CA3 /* SwiftyMarisaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF63AE81CA3137C00EABC54 /* SwiftyMarisaTests.swift */; };
+		CDF63AE41CA3137C00EABC54 /* Marisa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF63AD91CA3137C00EABC54 /* Marisa.framework */; };
+		CDF63AE91CA3137C00EABC54 /* SwiftyMarisaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF63AE81CA3137C00EABC54 /* SwiftyMarisaTests.swift */; };
+		CDF63AF61CA3151300EABC54 /* wrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CDF63AF31CA3151300EABC54 /* wrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDF63AF71CA3151300EABC54 /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDF63AF41CA3151300EABC54 /* wrapper.cpp */; };
+		CDF63AF81CA3151300EABC54 /* Marisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF63AF51CA3151300EABC54 /* Marisa.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD81C6401CA34CD20039E429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDF63AD01CA3137C00EABC54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD81C62D1CA34BD60039E429;
+			remoteInfo = "SwiftyMarisa OSX";
+		};
+		CDF63AE51CA3137C00EABC54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDF63AD01CA3137C00EABC54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDF63AD81CA3137C00EABC54;
+			remoteInfo = SwiftyMarisa;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD40502D1CA39F4800BB570B /* Marisa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Marisa.h; sourceTree = "<group>"; };
+		CD81C62E1CA34BD60039E429 /* Marisa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marisa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD81C63A1CA34CD20039E429 /* SwiftyMarisaOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyMarisaOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD89AFEA1CA34DE700922CA3 /* agent.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = agent.cc; sourceTree = "<group>"; };
+		CD89AFEB1CA34DE700922CA3 /* agent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = agent.h; sourceTree = "<group>"; };
+		CD89AFEC1CA34DE700922CA3 /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
+		CD89AFED1CA34DE700922CA3 /* exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exception.h; sourceTree = "<group>"; };
+		CD89AFF01CA34DE700922CA3 /* sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sort.h; sourceTree = "<group>"; };
+		CD89AFF11CA34DE700922CA3 /* algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = algorithm.h; sourceTree = "<group>"; };
+		CD89AFF21CA34DE700922CA3 /* intrin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intrin.h; sourceTree = "<group>"; };
+		CD89AFF41CA34DE700922CA3 /* mapper.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mapper.cc; sourceTree = "<group>"; };
+		CD89AFF51CA34DE700922CA3 /* mapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapper.h; sourceTree = "<group>"; };
+		CD89AFF61CA34DE700922CA3 /* reader.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = reader.cc; sourceTree = "<group>"; };
+		CD89AFF71CA34DE700922CA3 /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		CD89AFF81CA34DE700922CA3 /* writer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = writer.cc; sourceTree = "<group>"; };
+		CD89AFF91CA34DE700922CA3 /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		CD89AFFA1CA34DE700922CA3 /* io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
+		CD89AFFC1CA34DE700922CA3 /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
+		CD89AFFD1CA34DE700922CA3 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		CD89AFFE1CA34DE700922CA3 /* entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entry.h; sourceTree = "<group>"; };
+		CD89AFFF1CA34DE700922CA3 /* header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = header.h; sourceTree = "<group>"; };
+		CD89B0001CA34DE700922CA3 /* history.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = history.h; sourceTree = "<group>"; };
+		CD89B0011CA34DE700922CA3 /* key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = key.h; sourceTree = "<group>"; };
+		CD89B0021CA34DE700922CA3 /* louds-trie.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "louds-trie.cc"; sourceTree = "<group>"; };
+		CD89B0031CA34DE700922CA3 /* louds-trie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "louds-trie.h"; sourceTree = "<group>"; };
+		CD89B0041CA34DE700922CA3 /* range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = range.h; sourceTree = "<group>"; };
+		CD89B0051CA34DE700922CA3 /* state.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = state.h; sourceTree = "<group>"; };
+		CD89B0061CA34DE700922CA3 /* tail.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tail.cc; sourceTree = "<group>"; };
+		CD89B0071CA34DE700922CA3 /* tail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tail.h; sourceTree = "<group>"; };
+		CD89B0081CA34DE700922CA3 /* trie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trie.h; sourceTree = "<group>"; };
+		CD89B00A1CA34DE700922CA3 /* bit-vector.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "bit-vector.cc"; sourceTree = "<group>"; };
+		CD89B00B1CA34DE700922CA3 /* bit-vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "bit-vector.h"; sourceTree = "<group>"; };
+		CD89B00C1CA34DE700922CA3 /* flat-vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "flat-vector.h"; sourceTree = "<group>"; };
+		CD89B00D1CA34DE700922CA3 /* pop-count.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pop-count.h"; sourceTree = "<group>"; };
+		CD89B00E1CA34DE700922CA3 /* rank-index.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "rank-index.h"; sourceTree = "<group>"; };
+		CD89B00F1CA34DE700922CA3 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		CD89B0101CA34DE700922CA3 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		CD89B0111CA34DE700922CA3 /* iostream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iostream.h; sourceTree = "<group>"; };
+		CD89B0121CA34DE700922CA3 /* key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = key.h; sourceTree = "<group>"; };
+		CD89B0131CA34DE700922CA3 /* keyset.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = keyset.cc; sourceTree = "<group>"; };
+		CD89B0141CA34DE700922CA3 /* keyset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keyset.h; sourceTree = "<group>"; };
+		CD89B0151CA34DE700922CA3 /* query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = query.h; sourceTree = "<group>"; };
+		CD89B0161CA34DE700922CA3 /* scoped-array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "scoped-array.h"; sourceTree = "<group>"; };
+		CD89B0171CA34DE700922CA3 /* scoped-ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "scoped-ptr.h"; sourceTree = "<group>"; };
+		CD89B0191CA34DE700922CA3 /* trie.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trie.cc; sourceTree = "<group>"; };
+		CD89B01A1CA34DE700922CA3 /* trie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trie.h; sourceTree = "<group>"; };
+		CDF63AD91CA3137C00EABC54 /* Marisa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marisa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF63ADE1CA3137C00EABC54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF63AE31CA3137C00EABC54 /* SwiftyMarisaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyMarisaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF63AE81CA3137C00EABC54 /* SwiftyMarisaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyMarisaTests.swift; sourceTree = "<group>"; };
+		CDF63AEA1CA3137C00EABC54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF63AF31CA3151300EABC54 /* wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wrapper.h; sourceTree = "<group>"; };
+		CDF63AF41CA3151300EABC54 /* wrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
+		CDF63AF51CA3151300EABC54 /* Marisa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marisa.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD81C62A1CA34BD60039E429 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD81C6371CA34CD20039E429 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD81C63F1CA34CD20039E429 /* Marisa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF63AD51CA3137C00EABC54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF63AE01CA3137C00EABC54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF63AE41CA3137C00EABC54 /* Marisa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD89AFE91CA34DE700922CA3 /* marisa */ = {
+			isa = PBXGroup;
+			children = (
+				CD89AFEA1CA34DE700922CA3 /* agent.cc */,
+				CD89AFEB1CA34DE700922CA3 /* agent.h */,
+				CD89AFEC1CA34DE700922CA3 /* base.h */,
+				CD89AFED1CA34DE700922CA3 /* exception.h */,
+				CD89AFEE1CA34DE700922CA3 /* grimoire */,
+				CD89B0111CA34DE700922CA3 /* iostream.h */,
+				CD89B0121CA34DE700922CA3 /* key.h */,
+				CD89B0131CA34DE700922CA3 /* keyset.cc */,
+				CD89B0141CA34DE700922CA3 /* keyset.h */,
+				CD89B0151CA34DE700922CA3 /* query.h */,
+				CD89B0161CA34DE700922CA3 /* scoped-array.h */,
+				CD89B0171CA34DE700922CA3 /* scoped-ptr.h */,
+				CD89B0191CA34DE700922CA3 /* trie.cc */,
+				CD89B01A1CA34DE700922CA3 /* trie.h */,
+			);
+			name = marisa;
+			path = lib/marisa/lib/marisa;
+			sourceTree = "<group>";
+		};
+		CD89AFEE1CA34DE700922CA3 /* grimoire */ = {
+			isa = PBXGroup;
+			children = (
+				CD89AFEF1CA34DE700922CA3 /* algorithm */,
+				CD89AFF11CA34DE700922CA3 /* algorithm.h */,
+				CD89AFF21CA34DE700922CA3 /* intrin.h */,
+				CD89AFF31CA34DE700922CA3 /* io */,
+				CD89AFFA1CA34DE700922CA3 /* io.h */,
+				CD89AFFB1CA34DE700922CA3 /* trie */,
+				CD89B0081CA34DE700922CA3 /* trie.h */,
+				CD89B0091CA34DE700922CA3 /* vector */,
+				CD89B0101CA34DE700922CA3 /* vector.h */,
+			);
+			path = grimoire;
+			sourceTree = "<group>";
+		};
+		CD89AFEF1CA34DE700922CA3 /* algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				CD89AFF01CA34DE700922CA3 /* sort.h */,
+			);
+			path = algorithm;
+			sourceTree = "<group>";
+		};
+		CD89AFF31CA34DE700922CA3 /* io */ = {
+			isa = PBXGroup;
+			children = (
+				CD89AFF41CA34DE700922CA3 /* mapper.cc */,
+				CD89AFF51CA34DE700922CA3 /* mapper.h */,
+				CD89AFF61CA34DE700922CA3 /* reader.cc */,
+				CD89AFF71CA34DE700922CA3 /* reader.h */,
+				CD89AFF81CA34DE700922CA3 /* writer.cc */,
+				CD89AFF91CA34DE700922CA3 /* writer.h */,
+			);
+			path = io;
+			sourceTree = "<group>";
+		};
+		CD89AFFB1CA34DE700922CA3 /* trie */ = {
+			isa = PBXGroup;
+			children = (
+				CD89AFFC1CA34DE700922CA3 /* cache.h */,
+				CD89AFFD1CA34DE700922CA3 /* config.h */,
+				CD89AFFE1CA34DE700922CA3 /* entry.h */,
+				CD89AFFF1CA34DE700922CA3 /* header.h */,
+				CD89B0001CA34DE700922CA3 /* history.h */,
+				CD89B0011CA34DE700922CA3 /* key.h */,
+				CD89B0021CA34DE700922CA3 /* louds-trie.cc */,
+				CD89B0031CA34DE700922CA3 /* louds-trie.h */,
+				CD89B0041CA34DE700922CA3 /* range.h */,
+				CD89B0051CA34DE700922CA3 /* state.h */,
+				CD89B0061CA34DE700922CA3 /* tail.cc */,
+				CD89B0071CA34DE700922CA3 /* tail.h */,
+			);
+			path = trie;
+			sourceTree = "<group>";
+		};
+		CD89B0091CA34DE700922CA3 /* vector */ = {
+			isa = PBXGroup;
+			children = (
+				CD89B00A1CA34DE700922CA3 /* bit-vector.cc */,
+				CD89B00B1CA34DE700922CA3 /* bit-vector.h */,
+				CD89B00C1CA34DE700922CA3 /* flat-vector.h */,
+				CD89B00D1CA34DE700922CA3 /* pop-count.h */,
+				CD89B00E1CA34DE700922CA3 /* rank-index.h */,
+				CD89B00F1CA34DE700922CA3 /* vector.h */,
+			);
+			path = vector;
+			sourceTree = "<group>";
+		};
+		CDF63ACF1CA3137C00EABC54 = {
+			isa = PBXGroup;
+			children = (
+				CDF63AF91CA315C700EABC54 /* lib */,
+				CDF63ADB1CA3137C00EABC54 /* SwiftyMarisa */,
+				CDF63AE71CA3137C00EABC54 /* SwiftyMarisaTests */,
+				CDF63ADA1CA3137C00EABC54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDF63ADA1CA3137C00EABC54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDF63AD91CA3137C00EABC54 /* Marisa.framework */,
+				CDF63AE31CA3137C00EABC54 /* SwiftyMarisaTests.xctest */,
+				CD81C62E1CA34BD60039E429 /* Marisa.framework */,
+				CD81C63A1CA34CD20039E429 /* SwiftyMarisaOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDF63ADB1CA3137C00EABC54 /* SwiftyMarisa */ = {
+			isa = PBXGroup;
+			children = (
+				CD40502D1CA39F4800BB570B /* Marisa.h */,
+				CDF63AF31CA3151300EABC54 /* wrapper.h */,
+				CDF63AF41CA3151300EABC54 /* wrapper.cpp */,
+				CDF63AF51CA3151300EABC54 /* Marisa.swift */,
+				CDF63ADE1CA3137C00EABC54 /* Info.plist */,
+			);
+			path = SwiftyMarisa;
+			sourceTree = "<group>";
+		};
+		CDF63AE71CA3137C00EABC54 /* SwiftyMarisaTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDF63AE81CA3137C00EABC54 /* SwiftyMarisaTests.swift */,
+				CDF63AEA1CA3137C00EABC54 /* Info.plist */,
+			);
+			path = SwiftyMarisaTests;
+			sourceTree = "<group>";
+		};
+		CDF63AF91CA315C700EABC54 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CD89AFE91CA34DE700922CA3 /* marisa */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CD81C62B1CA34BD60039E429 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD89B0741CA34F3D00922CA3 /* wrapper.h in Headers */,
+				CD89B0481CA34DE700922CA3 /* range.h in Headers */,
+				CD89B0561CA34DE700922CA3 /* flat-vector.h in Headers */,
+				CD89B06C1CA34DE700922CA3 /* scoped-ptr.h in Headers */,
+				CD89B05A1CA34DE700922CA3 /* rank-index.h in Headers */,
+				CD89B03C1CA34DE700922CA3 /* entry.h in Headers */,
+				CD89B0721CA34DE700922CA3 /* trie.h in Headers */,
+				CD89B0401CA34DE700922CA3 /* history.h in Headers */,
+				CD89B05C1CA34DE700922CA3 /* vector.h in Headers */,
+				CD89B05E1CA34DE700922CA3 /* vector.h in Headers */,
+				CD89B0461CA34DE700922CA3 /* louds-trie.h in Headers */,
+				CD89B03E1CA34DE700922CA3 /* header.h in Headers */,
+				CD89B0661CA34DE700922CA3 /* keyset.h in Headers */,
+				CD89B0501CA34DE700922CA3 /* trie.h in Headers */,
+				CD89B0361CA34DE700922CA3 /* io.h in Headers */,
+				CD89B0421CA34DE700922CA3 /* key.h in Headers */,
+				CD89B0261CA34DE700922CA3 /* algorithm.h in Headers */,
+				CD89B06A1CA34DE700922CA3 /* scoped-array.h in Headers */,
+				CD89B0381CA34DE700922CA3 /* cache.h in Headers */,
+				CD40502F1CA39F4800BB570B /* Marisa.h in Headers */,
+				CD89B0301CA34DE700922CA3 /* reader.h in Headers */,
+				CD89B04E1CA34DE700922CA3 /* tail.h in Headers */,
+				CD89B0621CA34DE700922CA3 /* key.h in Headers */,
+				CD89B0601CA34DE700922CA3 /* iostream.h in Headers */,
+				CD89B0341CA34DE700922CA3 /* writer.h in Headers */,
+				CD89B0241CA34DE700922CA3 /* sort.h in Headers */,
+				CD89B01E1CA34DE700922CA3 /* agent.h in Headers */,
+				CD89B0541CA34DE700922CA3 /* bit-vector.h in Headers */,
+				CD89B0201CA34DE700922CA3 /* base.h in Headers */,
+				CD89B03A1CA34DE700922CA3 /* config.h in Headers */,
+				CD89B04A1CA34DE700922CA3 /* state.h in Headers */,
+				CD89B0281CA34DE700922CA3 /* intrin.h in Headers */,
+				CD89B0221CA34DE700922CA3 /* exception.h in Headers */,
+				CD89B0581CA34DE700922CA3 /* pop-count.h in Headers */,
+				CD89B02C1CA34DE700922CA3 /* mapper.h in Headers */,
+				CD89B0681CA34DE700922CA3 /* query.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF63AD61CA3137C00EABC54 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD89B0671CA34DE700922CA3 /* query.h in Headers */,
+				CD89B0251CA34DE700922CA3 /* algorithm.h in Headers */,
+				CD89B0531CA34DE700922CA3 /* bit-vector.h in Headers */,
+				CD89B05D1CA34DE700922CA3 /* vector.h in Headers */,
+				CD89B01D1CA34DE700922CA3 /* agent.h in Headers */,
+				CD89B0371CA34DE700922CA3 /* cache.h in Headers */,
+				CD89B03B1CA34DE700922CA3 /* entry.h in Headers */,
+				CD89B0591CA34DE700922CA3 /* rank-index.h in Headers */,
+				CD89B0351CA34DE700922CA3 /* io.h in Headers */,
+				CD89B0451CA34DE700922CA3 /* louds-trie.h in Headers */,
+				CD89B0551CA34DE700922CA3 /* flat-vector.h in Headers */,
+				CD89B04D1CA34DE700922CA3 /* tail.h in Headers */,
+				CD89B0471CA34DE700922CA3 /* range.h in Headers */,
+				CD89B05F1CA34DE700922CA3 /* iostream.h in Headers */,
+				CD89B02B1CA34DE700922CA3 /* mapper.h in Headers */,
+				CD89B02F1CA34DE700922CA3 /* reader.h in Headers */,
+				CD89B05B1CA34DE700922CA3 /* vector.h in Headers */,
+				CD89B0611CA34DE700922CA3 /* key.h in Headers */,
+				CD89B03D1CA34DE700922CA3 /* header.h in Headers */,
+				CD40502E1CA39F4800BB570B /* Marisa.h in Headers */,
+				CD89B0391CA34DE700922CA3 /* config.h in Headers */,
+				CD89B0651CA34DE700922CA3 /* keyset.h in Headers */,
+				CD89B03F1CA34DE700922CA3 /* history.h in Headers */,
+				CD89B0271CA34DE700922CA3 /* intrin.h in Headers */,
+				CDF63AF61CA3151300EABC54 /* wrapper.h in Headers */,
+				CD89B0411CA34DE700922CA3 /* key.h in Headers */,
+				CD89B0491CA34DE700922CA3 /* state.h in Headers */,
+				CD89B0211CA34DE700922CA3 /* exception.h in Headers */,
+				CD89B0571CA34DE700922CA3 /* pop-count.h in Headers */,
+				CD89B0231CA34DE700922CA3 /* sort.h in Headers */,
+				CD89B0711CA34DE700922CA3 /* trie.h in Headers */,
+				CD89B04F1CA34DE700922CA3 /* trie.h in Headers */,
+				CD89B06B1CA34DE700922CA3 /* scoped-ptr.h in Headers */,
+				CD89B01F1CA34DE700922CA3 /* base.h in Headers */,
+				CD89B0691CA34DE700922CA3 /* scoped-array.h in Headers */,
+				CD89B0331CA34DE700922CA3 /* writer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CD81C62D1CA34BD60039E429 /* Marisa OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD81C6351CA34BD60039E429 /* Build configuration list for PBXNativeTarget "Marisa OSX" */;
+			buildPhases = (
+				CD81C6291CA34BD60039E429 /* Sources */,
+				CD81C62A1CA34BD60039E429 /* Frameworks */,
+				CD81C62B1CA34BD60039E429 /* Headers */,
+				CD81C62C1CA34BD60039E429 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Marisa OSX";
+			productName = "SwiftyMarisa OSX";
+			productReference = CD81C62E1CA34BD60039E429 /* Marisa.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CD81C6391CA34CD20039E429 /* SwiftyMarisaOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD81C6421CA34CD20039E429 /* Build configuration list for PBXNativeTarget "SwiftyMarisaOSXTests" */;
+			buildPhases = (
+				CD81C6361CA34CD20039E429 /* Sources */,
+				CD81C6371CA34CD20039E429 /* Frameworks */,
+				CD81C6381CA34CD20039E429 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD81C6411CA34CD20039E429 /* PBXTargetDependency */,
+			);
+			name = SwiftyMarisaOSXTests;
+			productName = SwiftyMarisaOSXTests;
+			productReference = CD81C63A1CA34CD20039E429 /* SwiftyMarisaOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CDF63AD81CA3137C00EABC54 /* Marisa iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF63AED1CA3137C00EABC54 /* Build configuration list for PBXNativeTarget "Marisa iOS" */;
+			buildPhases = (
+				CDF63AD41CA3137C00EABC54 /* Sources */,
+				CDF63AD51CA3137C00EABC54 /* Frameworks */,
+				CDF63AD61CA3137C00EABC54 /* Headers */,
+				CDF63AD71CA3137C00EABC54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Marisa iOS";
+			productName = SwiftyMarisa;
+			productReference = CDF63AD91CA3137C00EABC54 /* Marisa.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CDF63AE21CA3137C00EABC54 /* SwiftyMarisaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF63AF01CA3137C00EABC54 /* Build configuration list for PBXNativeTarget "SwiftyMarisaTests" */;
+			buildPhases = (
+				CDF63ADF1CA3137C00EABC54 /* Sources */,
+				CDF63AE01CA3137C00EABC54 /* Frameworks */,
+				CDF63AE11CA3137C00EABC54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDF63AE61CA3137C00EABC54 /* PBXTargetDependency */,
+			);
+			name = SwiftyMarisaTests;
+			productName = SwiftyMarisaTests;
+			productReference = CDF63AE31CA3137C00EABC54 /* SwiftyMarisaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDF63AD01CA3137C00EABC54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Aramzamzam LLC";
+				TargetAttributes = {
+					CD81C62D1CA34BD60039E429 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					CD81C6391CA34CD20039E429 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					CDF63AD81CA3137C00EABC54 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					CDF63AE21CA3137C00EABC54 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = CDF63AD31CA3137C00EABC54 /* Build configuration list for PBXProject "SwiftyMarisa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CDF63ACF1CA3137C00EABC54;
+			productRefGroup = CDF63ADA1CA3137C00EABC54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDF63AD81CA3137C00EABC54 /* Marisa iOS */,
+				CDF63AE21CA3137C00EABC54 /* SwiftyMarisaTests */,
+				CD81C62D1CA34BD60039E429 /* Marisa OSX */,
+				CD81C6391CA34CD20039E429 /* SwiftyMarisaOSXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD81C62C1CA34BD60039E429 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD81C6381CA34CD20039E429 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF63AD71CA3137C00EABC54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF63AE11CA3137C00EABC54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD81C6291CA34BD60039E429 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD89B0761CA34F6C00922CA3 /* wrapper.cpp in Sources */,
+				CD89B0521CA34DE700922CA3 /* bit-vector.cc in Sources */,
+				CD89B02E1CA34DE700922CA3 /* reader.cc in Sources */,
+				CD89B0441CA34DE700922CA3 /* louds-trie.cc in Sources */,
+				CD89B0321CA34DE700922CA3 /* writer.cc in Sources */,
+				CD89B0641CA34DE700922CA3 /* keyset.cc in Sources */,
+				CD89B02A1CA34DE700922CA3 /* mapper.cc in Sources */,
+				CD89B04C1CA34DE700922CA3 /* tail.cc in Sources */,
+				CD89AFE81CA34DAB00922CA3 /* Marisa.swift in Sources */,
+				CD89B01C1CA34DE700922CA3 /* agent.cc in Sources */,
+				CD89B0701CA34DE700922CA3 /* trie.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD81C6361CA34CD20039E429 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD89B0771CA34FAA00922CA3 /* SwiftyMarisaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF63AD41CA3137C00EABC54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD89B06F1CA34DE700922CA3 /* trie.cc in Sources */,
+				CD89B0431CA34DE700922CA3 /* louds-trie.cc in Sources */,
+				CDF63AF71CA3151300EABC54 /* wrapper.cpp in Sources */,
+				CDF63AF81CA3151300EABC54 /* Marisa.swift in Sources */,
+				CD89B0291CA34DE700922CA3 /* mapper.cc in Sources */,
+				CD89B0511CA34DE700922CA3 /* bit-vector.cc in Sources */,
+				CD89B02D1CA34DE700922CA3 /* reader.cc in Sources */,
+				CD89B04B1CA34DE700922CA3 /* tail.cc in Sources */,
+				CD89B0311CA34DE700922CA3 /* writer.cc in Sources */,
+				CD89B0631CA34DE700922CA3 /* keyset.cc in Sources */,
+				CD89B01B1CA34DE700922CA3 /* agent.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF63ADF1CA3137C00EABC54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF63AE91CA3137C00EABC54 /* SwiftyMarisaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD81C6411CA34CD20039E429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD81C62D1CA34BD60039E429 /* Marisa OSX */;
+			targetProxy = CD81C6401CA34CD20039E429 /* PBXContainerItemProxy */;
+		};
+		CDF63AE61CA3137C00EABC54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDF63AD81CA3137C00EABC54 /* Marisa iOS */;
+			targetProxy = CDF63AE51CA3137C00EABC54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CD81C6331CA34BD60039E429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SwiftyMarisa/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.aramzamzam.SwiftyMarisa;
+				PRODUCT_NAME = Marisa;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CD81C6341CA34BD60039E429 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SwiftyMarisa/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.aramzamzam.SwiftyMarisa;
+				PRODUCT_NAME = Marisa;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CD81C6431CA34CD20039E429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftyMarisaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.aramzamzam.SwiftyMarisaOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CD81C6441CA34CD20039E429 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftyMarisaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.aramzamzam.SwiftyMarisaOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CDF63AEB1CA3137C00EABC54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = lib/marisa/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = SwiftyMarisa;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CDF63AEC1CA3137C00EABC54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = lib/marisa/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyMarisa;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CDF63AEE1CA3137C00EABC54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftyMarisa/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.aramzamzam.SwiftyMarisa;
+				PRODUCT_NAME = Marisa;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDF63AEF1CA3137C00EABC54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftyMarisa/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.aramzamzam.SwiftyMarisa;
+				PRODUCT_NAME = Marisa;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CDF63AF11CA3137C00EABC54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SwiftyMarisaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.aramzamzam.SwiftyMarisaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CDF63AF21CA3137C00EABC54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SwiftyMarisaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.aramzamzam.SwiftyMarisaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD81C6351CA34BD60039E429 /* Build configuration list for PBXNativeTarget "Marisa OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD81C6331CA34BD60039E429 /* Debug */,
+				CD81C6341CA34BD60039E429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD81C6421CA34CD20039E429 /* Build configuration list for PBXNativeTarget "SwiftyMarisaOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD81C6431CA34CD20039E429 /* Debug */,
+				CD81C6441CA34CD20039E429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF63AD31CA3137C00EABC54 /* Build configuration list for PBXProject "SwiftyMarisa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF63AEB1CA3137C00EABC54 /* Debug */,
+				CDF63AEC1CA3137C00EABC54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF63AED1CA3137C00EABC54 /* Build configuration list for PBXNativeTarget "Marisa iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF63AEE1CA3137C00EABC54 /* Debug */,
+				CDF63AEF1CA3137C00EABC54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF63AF01CA3137C00EABC54 /* Build configuration list for PBXNativeTarget "SwiftyMarisaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF63AF11CA3137C00EABC54 /* Debug */,
+				CDF63AF21CA3137C00EABC54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDF63AD01CA3137C00EABC54 /* Project object */;
+}
