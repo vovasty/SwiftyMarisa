@@ -21,29 +21,29 @@
 
 import Foundation
 
-public class SearchResults : SequenceType {
-    private let context: COpaquePointer
-    private let query: String
-    private var searchContext: COpaquePointer? = nil
-    private let type: MarisaSearchType
+open class SearchResults : Sequence {
+    fileprivate let context: OpaquePointer
+    fileprivate let query: String
+    fileprivate var searchContext: OpaquePointer? = nil
+    fileprivate let type: MarisaSearchType
     
-    init(context: COpaquePointer, query: String, type: MarisaSearchType) {
+    init(context: OpaquePointer, query: String, type: MarisaSearchType) {
         self.context = context
         self.query = query
         self.type = type
     }
     
-    public func generate() -> AnyGenerator<String> {
-        var buf: UnsafeMutablePointer<CChar> = nil
+    open func makeIterator() -> AnyIterator<String> {
+        var buf: UnsafeMutablePointer<CChar>? = nil
         var len: Int = 0
         
-        let pointer = UnsafeMutablePointer<CChar>((self.query as NSString).UTF8String)
+        let pointer = UnsafeMutablePointer<CChar>(mutating: (self.query as NSString).utf8String)
         
         searchContext = marisa_search(context, pointer, self.type);
         
-        return AnyGenerator<String>{
+        return AnyIterator<String>{
             guard marisa_search_next(self.searchContext!, &buf, &len) == 1 else { return nil }
-            return String(bytesNoCopy: buf, length: len, encoding: NSUTF8StringEncoding, freeWhenDone: false)
+            return String(bytesNoCopy: buf!, length: len, encoding: String.Encoding.utf8, freeWhenDone: false)
         }
     }
     
@@ -55,9 +55,9 @@ public class SearchResults : SequenceType {
 }
 
 
-public class Marisa {
-    private var context = marisa_create_context()
-    private var searchCallback: ((String)->Bool)!
+open class Marisa {
+    fileprivate var context = marisa_create_context()
+    fileprivate var searchCallback: ((String)->Bool)!
     
     public init() {}
     
@@ -75,7 +75,7 @@ public class Marisa {
      ...
      ```
      */
-    public func build(@noescape builder: ((String)->Void)->Void) {
+    open func build(_ builder: ((String)->Void)->Void) {
         let b: (String) -> Void = { marisa_add_word(self.context, $0) }
         builder(b)
         marisa_build_tree(context)
@@ -89,8 +89,8 @@ public class Marisa {
         - Predictive: Searches keys starting with a query string
      - returns: Sequence.
      */
-    public func search(query: String, _ type: MarisaSearchType) -> SearchResults {
-        return SearchResults(context: context, query: query, type: type)
+    open func search(_ query: String, _ type: MarisaSearchType) -> SearchResults {
+        return SearchResults(context: context!, query: query, type: type)
     }
 
     /**
@@ -98,7 +98,7 @@ public class Marisa {
      - parameter query: Search string.
      - returns: true, if found.
      */
-    public func lookup(query: String) -> Bool {
+    open func lookup(_ query: String) -> Bool {
         return marisa_lookup(context, query) == 1
     }
     
@@ -106,7 +106,7 @@ public class Marisa {
      Saves dictionary into a file.
      - parameter path: Path to a file.
      */
-    public func save(path: String) {
+    open func save(_ path: String) {
         marisa_save(context, path)
     }
 
@@ -114,7 +114,7 @@ public class Marisa {
      Reads dictionary from a file.
      - parameter path: Path to a file.
      */
-    public func load(path: String) {
+    open func load(_ path: String) {
         marisa_load(context, path)
     }
     

@@ -34,7 +34,7 @@ class SwiftyMarisaTests: XCTestCase {
         
         var actual = [String]()
         var expect = ["U", "US", "USA"]
-        for a in trie.search("U", .Predictive) {
+        for a in trie.search("U", .predictive) {
             actual.append(a)
         }
         
@@ -42,7 +42,7 @@ class SwiftyMarisaTests: XCTestCase {
 
         actual = [String]()
         expect = ["US", "USA"]
-        for a in trie.search("US", .Predictive) {
+        for a in trie.search("US", .predictive) {
             actual.append(a)
         }
         
@@ -64,7 +64,7 @@ class SwiftyMarisaTests: XCTestCase {
         var actual = [String]()
         
         let expect = ["U", "US", "USA"]
-        for a in trie.search("USA", .Prefix) {
+        for a in trie.search("USA", .prefix) {
             actual.append(a)
         }
         
