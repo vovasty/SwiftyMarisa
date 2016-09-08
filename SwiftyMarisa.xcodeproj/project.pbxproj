@@ -540,6 +540,7 @@
 					};
 					CDF63AD81CA3137C00EABC54 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					CDF63AE21CA3137C00EABC54 = {
 						CreatedOnToolsVersion = 7.3;
@@ -867,6 +868,7 @@
 				PRODUCT_NAME = Marisa;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -886,6 +888,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.aramzamzam.SwiftyMarisa;
 				PRODUCT_NAME = Marisa;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
