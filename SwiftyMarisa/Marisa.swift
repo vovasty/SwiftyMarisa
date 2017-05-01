@@ -30,7 +30,7 @@ import Foundation
 open class SearchResults: Sequence {
     fileprivate let context: OpaquePointer
     fileprivate let query: String
-    fileprivate var searchContext: OpaquePointer? = nil
+    fileprivate var searchContext: OpaquePointer?
     fileprivate let type: MarisaSearchType
 
     init(context: OpaquePointer, query: String, type: MarisaSearchType) {
@@ -63,7 +63,6 @@ open class SearchResults: Sequence {
         }
     }
 }
-
 
 open class Marisa {
     fileprivate var context = marisa_create_context()
