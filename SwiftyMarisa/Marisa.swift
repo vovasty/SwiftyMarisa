@@ -40,20 +40,20 @@ open class SearchResults: Sequence {
     }
 
     open func makeIterator() -> AnyIterator<String> {
-        var buf: UnsafeMutablePointer<CChar>? = nil
+        var buf: UnsafeMutablePointer<CChar>?
         var len: Int = 0
 
-        let pointer = UnsafeMutablePointer<CChar>(mutating: (self.query as NSString).utf8String)
+        let pointer = UnsafeMutablePointer<CChar>(mutating: (query as NSString).utf8String)
 
-        searchContext = marisa_search(context, pointer, self.type)
+        searchContext = marisa_search(context, pointer, type)
 
         return AnyIterator<String> {
             guard marisa_search_next(self.searchContext!, &buf, &len) == 1 else { return nil }
 
             return String(bytesNoCopy: buf!,
-                               length: len,
-                             encoding: String.Encoding.utf8,
-                         freeWhenDone: false)
+                          length: len,
+                          encoding: String.Encoding.utf8,
+                          freeWhenDone: false)
         }
     }
 
@@ -65,8 +65,8 @@ open class SearchResults: Sequence {
 }
 
 open class Marisa {
-    fileprivate var context = marisa_create_context()
-    fileprivate var searchCallback: ((String) -> Bool)!
+    private var context = marisa_create_context()
+    private var searchCallback: ((String) -> Bool)!
 
     public init() {}
 
@@ -84,7 +84,7 @@ open class Marisa {
      ...
      ```
      */
-    open func build(_ builder: ((String)->Void)->Void) {
+    open func build(_ builder: ((String) -> Void) -> Void) {
         let b: (String) -> Void = { marisa_add_word(self.context, $0) }
         builder(b)
         marisa_build_tree(context)

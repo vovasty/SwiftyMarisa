@@ -25,9 +25,8 @@
 //  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 //  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
-import XCTest
 @testable import Marisa
+import XCTest
 
 class SwiftyMarisaTests: XCTestCase {
     func testPredictiveSearch() {
@@ -54,8 +53,6 @@ class SwiftyMarisaTests: XCTestCase {
         }
 
         XCTAssertEqual(expect, actual)
-
-
     }
 
     func testPrefixSearch() {
@@ -87,7 +84,5 @@ class SwiftyMarisaTests: XCTestCase {
 
         XCTAssert(trie.lookup("apple"))
         XCTAssertFalse(trie.lookup("microsoft"))
-
     }
-
 }
