@@ -2,8 +2,7 @@ SwiftyMarisa is a swift wrapper for [marisa-trie](https://github.com/s-yata/mari
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.9+ / tvOS 9.0+ / watchOS 2.0+
-- Xcode 11.0+
+Swift Package Manager 5.2
 
 ## Description
 
