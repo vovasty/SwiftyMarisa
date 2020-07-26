@@ -21,7 +21,7 @@ let package = Package(
             dependencies: ["marisa"],
             cxxSettings: [.headerSearchPath("../marisa/lib")] // use cpp headers from the fake marisa lib
         ),
-        //we don't expose any cpp haders here
+        // we don't expose any cpp haders here
         .target(
             name: "marisa",
             dependencies: [],
