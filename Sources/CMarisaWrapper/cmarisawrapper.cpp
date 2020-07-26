@@ -19,7 +19,7 @@
 //  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 //  OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#include "wrapper.h"
+#include "cmarisawrapper.h"
 #include <marisa/trie.h>
 #include <stdlib.h>
 #include <string.h>
@@ -61,8 +61,9 @@ extern "C" {
         marisa::Trie *trie = context->trie;
         
         agent.set_query(query);
-        
+
         return trie->lookup(agent);
+        return 0;
     }
     
     marisa_search_context *marisa_search(marisa_context *context, char *query, MarisaSearchType type) {
@@ -72,7 +73,7 @@ extern "C" {
         marisa_search_context *search_context = (marisa_search_context *)malloc(sizeof(marisa_search_context));
         search_context->trie = trie;
         search_context->agent = agent;
-        
+
         switch (type) {
             case MarisaSearchTypePrefix:
                 search_context->search = &marisa::Trie::common_prefix_search;
@@ -81,7 +82,7 @@ extern "C" {
                 search_context->search = &marisa::Trie::predictive_search;
                 break;
         }
-        
+
         agent->set_query(query);
         
         return search_context;
@@ -89,7 +90,7 @@ extern "C" {
     
     int marisa_search_next(marisa_search_context *context, char **result, size_t *len) {
         marisa::Agent *agent = context->agent;
-        
+
         if ( (*context->trie.*context->search)(*agent) ) {
             *result = (char *)agent->key().ptr();
             *len = agent->key().length();
