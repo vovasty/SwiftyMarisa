@@ -29,35 +29,10 @@ import CMarisaWrapper
 import Foundation
 
 public extension MarisaSearchType {
+    // Searches keys from the possible prefixes of a query string.
     static var prefix: MarisaSearchType { MarisaSearchType(0) }
+    // Searches keys starting with a query string
     static var predictive: MarisaSearchType { MarisaSearchType(1) }
-}
-
-public final class SearchResults: Sequence {
-    private let searchContext: OpaquePointer
-
-    init(context: OpaquePointer, query: String, type: MarisaSearchType) {
-        searchContext = marisa_search(context, query, type)
-    }
-
-    public func makeIterator() -> AnyIterator<String> {
-        return AnyIterator<String> {
-            var buf: UnsafeMutablePointer<CChar>?
-            var len: Int = 0
-            guard marisa_search_next(self.searchContext, &buf, &len) == 1 else { return nil }
-            guard len > 0 else { return nil }
-            guard let b = buf else { return nil }
-
-            return String(bytesNoCopy: b,
-                          length: len,
-                          encoding: .utf8,
-                          freeWhenDone: false)
-        }
-    }
-
-    deinit {
-        marisa_delete_search_context(searchContext)
-    }
 }
 
 public final class Marisa {
@@ -66,8 +41,8 @@ public final class Marisa {
     public init() {}
 
     /**
-     Builds dictionary.
-     - parameter builder: Closure with builder parameter. Builder accepts string parameter.
+     Adds data to the trie.
+     - parameter builder: Closure with a `builder` parameter. `builder` accepts a string parameter.
 
      ```
      ...
@@ -89,12 +64,10 @@ public final class Marisa {
      Searches keys from the possible prefixes of a query string.
      - parameter query: Search string.
      - parameter type: Search type.
-        - Prefix: Searches keys from the possible prefixes of a query string.
-        - Predictive: Searches keys starting with a query string
-     - returns: Sequence.
+     - returns: a sequence.
      */
-    public func search(_ query: String, _ type: MarisaSearchType) -> SearchResults {
-        return SearchResults(context: context, query: query, type: type)
+    public func search(_ query: String, _ type: MarisaSearchType) -> AnySequence<String> {
+        return AnySequence(SearchResults(context: context, query: query, type: type))
     }
 
     /**
@@ -124,5 +97,34 @@ public final class Marisa {
 
     deinit {
         marisa_delete_context(context)
+    }
+}
+
+// MARK: - Private
+
+private final class SearchResults: Sequence {
+    private let searchContext: OpaquePointer
+
+    init(context: OpaquePointer, query: String, type: MarisaSearchType) {
+        searchContext = marisa_search(context, query, type)
+    }
+
+    func makeIterator() -> AnyIterator<String> {
+        return AnyIterator<String> {
+            var buf: UnsafeMutablePointer<CChar>?
+            var len: Int = 0
+            guard marisa_search_next(self.searchContext, &buf, &len) == 1 else { return nil }
+            guard len > 0 else { return nil }
+            guard let b = buf else { return nil }
+
+            return String(bytesNoCopy: b,
+                          length: len,
+                          encoding: .utf8,
+                          freeWhenDone: false)
+        }
+    }
+
+    deinit {
+        marisa_delete_search_context(searchContext)
     }
 }
