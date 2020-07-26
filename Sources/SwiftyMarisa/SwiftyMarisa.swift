@@ -34,10 +34,10 @@ extension MarisaSearchType {
 }
 
 open class SearchResults: Sequence {
-    fileprivate let context: OpaquePointer
-    fileprivate let query: String
-    fileprivate var searchContext: OpaquePointer?
-    fileprivate let type: MarisaSearchType
+    private let context: OpaquePointer
+    private let query: String
+    private var searchContext: OpaquePointer?
+    private let type: MarisaSearchType
 
     init(context: OpaquePointer, query: String, type: MarisaSearchType) {
         self.context = context
