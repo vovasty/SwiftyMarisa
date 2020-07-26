@@ -1,4 +1,4 @@
-SwiftyMarisa is a swift wrapper for [marisa-trie](https://marisa-trie.googlecode.com/).
+SwiftyMarisa is a swift wrapper for [marisa-trie](https://github.com/s-yata/marisa-trie/).
 
 ## Requirements
 

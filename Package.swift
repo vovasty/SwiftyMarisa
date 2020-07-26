@@ -18,14 +18,14 @@ let package = Package(
         ),
         .target(
             name: "CMarisaWrapper",
-            dependencies: ["marisa"],
-            cxxSettings: [.headerSearchPath("../marisa/lib")] // use cpp headers from the fake marisa lib
+            dependencies: ["marisa-trie"]
         ),
         // we don't expose any cpp haders here
         .target(
-            name: "marisa",
-            dependencies: [],
-            sources: ["lib/marisa"]
+            name: "marisa-trie",
+            sources: ["lib/marisa"],
+            publicHeadersPath:"include",
+            cxxSettings: [.headerSearchPath("lib")]
         ),
         .testTarget(
             name: "SwiftyMarisaTests",
