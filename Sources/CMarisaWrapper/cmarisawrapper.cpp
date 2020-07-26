@@ -29,6 +29,7 @@ extern "C" {
     typedef struct marisa_search_context {
         marisa::Trie  *trie;
         marisa::Agent  *agent;
+        char *query;
         bool (marisa::Trie::*search)(marisa::Agent&) const;
     } marisa_search_context;
 
@@ -66,13 +67,16 @@ extern "C" {
         return 0;
     }
     
-    marisa_search_context *marisa_search(marisa_context *context, char *query, MarisaSearchType type) {
+    marisa_search_context *marisa_search(marisa_context *context, const char *query, MarisaSearchType type) {
         marisa::Agent *agent = new marisa::Agent;
         marisa::Trie *trie = context->trie;
         
         marisa_search_context *search_context = (marisa_search_context *)malloc(sizeof(marisa_search_context));
         search_context->trie = trie;
         search_context->agent = agent;
+        char* query_copy = (char *)malloc(strlen(query));
+        strcpy(query_copy, query);
+        search_context->query = query_copy;
 
         switch (type) {
             case MarisaSearchTypePrefix:
@@ -83,7 +87,7 @@ extern "C" {
                 break;
         }
 
-        agent->set_query(query);
+        agent->set_query(search_context->query);
         
         return search_context;
     }
@@ -105,6 +109,7 @@ extern "C" {
     
     void marisa_delete_search_context(marisa_search_context *context) {
         delete (marisa::Agent*)context->agent;
+        free(context->query);
         free(context);
     }
 
