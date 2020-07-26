@@ -3,7 +3,7 @@ SwiftyMarisa is a swift wrapper for [marisa-trie](https://marisa-trie.googlecode
 ## Requirements
 
 - iOS 8.0+ / Mac OS X 10.9+ / tvOS 9.0+ / watchOS 2.0+
-- Xcode 7.2+
+- Xcode 11.0+
 
 ## Description
 
@@ -42,7 +42,7 @@ trie.build { (builder) -> Void in
 ### Search
 
 ```swift
-for entry in trie.search("US", .Predictive) {
+for entry in trie.search("US", .predictive) {
      print(entry)
 }
 ```
