@@ -1,4 +1,4 @@
-//  wrapper.h
+//  cmarisawrapper.h
 //
 //  Copyright (c) 2016, Vladimir Solomenchuk
 //  All rights reserved.
@@ -19,21 +19,17 @@
 //  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 //  OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef wrapper_h
-#define wrapper_h
+#ifndef cmarisawrapper_h
+#define cmarisawrapper_h
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#ifndef NS_ENUM
-#define NS_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
-#endif
-    
-    typedef NS_ENUM(int, MarisaSearchType) {
+    typedef enum _MarisaSearchType: int {
         MarisaSearchTypePrefix = 0,
         MarisaSearchTypePredictive = 1
-    };
+    } MarisaSearchType;
 
 
     typedef unsigned long size_t;
@@ -64,4 +60,4 @@ extern "C" {
 }
 #endif
 
-#endif /* wrapper_h */
+#endif /* cmarisawrapper_h */

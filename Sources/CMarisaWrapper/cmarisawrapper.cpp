@@ -1,4 +1,4 @@
-//  wrapper.c
+//  cmarisawrapper.cpp
 //
 //  Copyright (c) 2016, Vladimir Solomenchuk
 //  All rights reserved.
