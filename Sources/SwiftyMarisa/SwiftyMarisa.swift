@@ -61,7 +61,7 @@ public final class SearchResults: Sequence {
 }
 
 public final class Marisa {
-    private let context = marisa_create_context()
+    private let context = marisa_create_context()!
 
     public init() {}
 
@@ -94,7 +94,7 @@ public final class Marisa {
      - returns: Sequence.
      */
     public func search(_ query: String, _ type: MarisaSearchType) -> SearchResults {
-        return SearchResults(context: context!, query: query, type: type)
+        return SearchResults(context: context, query: query, type: type)
     }
 
     /**
