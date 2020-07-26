@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "marisa-trie",
             sources: ["lib/marisa"],
-            publicHeadersPath:"include",
+            publicHeadersPath: "include",
             cxxSettings: [.headerSearchPath("lib")]
         ),
         .testTarget(

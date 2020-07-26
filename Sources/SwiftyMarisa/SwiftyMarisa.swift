@@ -42,12 +42,12 @@ public final class SearchResults: Sequence {
 
     public func makeIterator() -> AnyIterator<String> {
         return AnyIterator<String> {
-            var buf: UnsafeMutablePointer<CChar>? = nil
+            var buf: UnsafeMutablePointer<CChar>?
             var len: Int = 0
             guard marisa_search_next(self.searchContext, &buf, &len) == 1 else { return nil }
             guard len > 0 else { return nil }
             guard let b = buf else { return nil }
-            
+
             return String(bytesNoCopy: b,
                           length: len,
                           encoding: .utf8,
