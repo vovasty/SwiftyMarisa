@@ -1,4 +1,4 @@
-//  SwiftyMarisa.h
+//  wrapper.h
 //
 //  Copyright (c) 2016, Vladimir Solomenchuk
 //  All rights reserved.
@@ -19,10 +19,49 @@
 //  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 //  OF THE POSSIBILITY OF SUCH DAMAGE.
 
-@import Foundation;
+#ifndef wrapper_h
+#define wrapper_h
 
-FOUNDATION_EXPORT double SwiftyMarisaVersionNumber;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-FOUNDATION_EXPORT const unsigned char SwiftyMarisaVersionString[];
+#ifndef NS_ENUM
+#define NS_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
+#endif
+    
+    typedef NS_ENUM(int, MarisaSearchType) {
+        MarisaSearchTypePrefix = 0,
+        MarisaSearchTypePredictive = 1
+    };
 
-#include "wrapper.h"
+
+    typedef unsigned long size_t;
+    
+    typedef struct marisa_context marisa_context;
+    typedef struct marisa_search_context marisa_search_context;
+    
+    marisa_search_context *marisa_search(marisa_context *context, char *query, MarisaSearchType type);
+    
+    int marisa_search_next(marisa_search_context *context, char **result, size_t *len);
+    
+    int marisa_lookup(marisa_context *context, const char *query);
+    
+    void marisa_delete_search_context(marisa_search_context *context);
+
+    marisa_context *marisa_create_context();
+
+    void marisa_add_word(marisa_context *context, const char *word);
+    
+    void marisa_build_tree(marisa_context *context);
+    
+    void marisa_load(marisa_context *context, const char *path);
+    void marisa_save(marisa_context *context, const char *path);
+
+    
+    void marisa_delete_context(marisa_context *context);
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* wrapper_h */

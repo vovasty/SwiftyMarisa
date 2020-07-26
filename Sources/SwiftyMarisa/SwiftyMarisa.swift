@@ -25,7 +25,13 @@
 //  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 //  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+import CMarisaWrapper
 import Foundation
+
+extension MarisaSearchType {
+    static var prefix: MarisaSearchType { MarisaSearchType(0) }
+    static var predictive: MarisaSearchType { MarisaSearchType(1) }
+}
 
 open class SearchResults: Sequence {
     fileprivate let context: OpaquePointer

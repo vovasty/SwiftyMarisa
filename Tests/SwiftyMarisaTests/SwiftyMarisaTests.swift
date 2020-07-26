@@ -25,7 +25,7 @@
 //  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 //  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-@testable import Marisa
+@testable import SwiftyMarisa
 import XCTest
 
 class SwiftyMarisaTests: XCTestCase {
@@ -38,19 +38,26 @@ class SwiftyMarisaTests: XCTestCase {
             builder("USA")
         }
 
-        var actual = [String]()
         var expect = ["U", "US", "USA"]
-        for a in trie.search("U", .predictive) {
-            actual.append(a)
-        }
+        var actual = trie.search("U", .predictive).map { $0 }
 
         XCTAssertEqual(expect, actual)
 
-        actual = [String]()
         expect = ["US", "USA"]
-        for a in trie.search("US", .predictive) {
-            actual.append(a)
+        actual = trie.search("US", .predictive).map { $0 }
+
+        XCTAssertEqual(expect, actual)
+    }
+
+    func testPredictiveSearchEmpty() {
+        let trie = Marisa()
+
+        trie.build { (builder) -> Void in
+            builder("USA")
         }
+
+        let expect = [String]()
+        let actual = trie.search("UK", .prefix).map { $0 }
 
         XCTAssertEqual(expect, actual)
     }
@@ -65,12 +72,21 @@ class SwiftyMarisaTests: XCTestCase {
             builder("UK")
         }
 
-        var actual = [String]()
-
         let expect = ["U", "US", "USA"]
-        for a in trie.search("USA", .prefix) {
-            actual.append(a)
+        let actual = trie.search("USA", .prefix).map { $0 }
+
+        XCTAssertEqual(expect, actual)
+    }
+
+    func testPrefixSearchEmpty() {
+        let trie = Marisa()
+
+        trie.build { (builder) -> Void in
+            builder("UK")
         }
+
+        let expect = [String]()
+        let actual = trie.search("USA", .prefix).map { $0 }
 
         XCTAssertEqual(expect, actual)
     }
