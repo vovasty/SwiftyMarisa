@@ -41,7 +41,7 @@ extern "C" {
     typedef struct marisa_context marisa_context;
     typedef struct marisa_search_context marisa_search_context;
     
-    marisa_search_context *marisa_search(marisa_context *context, char *query, MarisaSearchType type);
+    marisa_search_context *marisa_search(marisa_context *context, const char *query, MarisaSearchType type);
     
     int marisa_search_next(marisa_search_context *context, char **result, size_t *len);
     

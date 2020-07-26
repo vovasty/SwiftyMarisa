@@ -28,51 +28,40 @@
 import CMarisaWrapper
 import Foundation
 
-extension MarisaSearchType {
+public extension MarisaSearchType {
     static var prefix: MarisaSearchType { MarisaSearchType(0) }
     static var predictive: MarisaSearchType { MarisaSearchType(1) }
 }
 
-open class SearchResults: Sequence {
-    private let context: OpaquePointer
-    private let query: String
-    private var searchContext: OpaquePointer?
-    private let type: MarisaSearchType
+public final class SearchResults: Sequence {
+    private let searchContext: OpaquePointer
 
     init(context: OpaquePointer, query: String, type: MarisaSearchType) {
-        self.context = context
-        self.query = query
-        self.type = type
+        searchContext = marisa_search(context, query, type)
     }
 
-    open func makeIterator() -> AnyIterator<String> {
-        var buf: UnsafeMutablePointer<CChar>?
-        var len: Int = 0
-
-        let pointer = UnsafeMutablePointer<CChar>(mutating: (query as NSString).utf8String)
-
-        searchContext = marisa_search(context, pointer, type)
-
+    public func makeIterator() -> AnyIterator<String> {
         return AnyIterator<String> {
-            guard marisa_search_next(self.searchContext!, &buf, &len) == 1 else { return nil }
-
-            return String(bytesNoCopy: buf!,
+            var buf: UnsafeMutablePointer<CChar>? = nil
+            var len: Int = 0
+            guard marisa_search_next(self.searchContext, &buf, &len) == 1 else { return nil }
+            guard len > 0 else { return nil }
+            guard let b = buf else { return nil }
+            
+            return String(bytesNoCopy: b,
                           length: len,
-                          encoding: String.Encoding.utf8,
+                          encoding: .utf8,
                           freeWhenDone: false)
         }
     }
 
     deinit {
-        if searchContext != nil {
-            marisa_delete_search_context(searchContext!)
-        }
+        marisa_delete_search_context(searchContext)
     }
 }
 
-open class Marisa {
-    private var context = marisa_create_context()
-    private var searchCallback: ((String) -> Bool)!
+public final class Marisa {
+    private let context = marisa_create_context()
 
     public init() {}
 
@@ -90,7 +79,7 @@ open class Marisa {
      ...
      ```
      */
-    open func build(_ builder: ((String) -> Void) -> Void) {
+    public func build(_ builder: ((String) -> Void) -> Void) {
         let b: (String) -> Void = { marisa_add_word(self.context, $0) }
         builder(b)
         marisa_build_tree(context)
@@ -104,7 +93,7 @@ open class Marisa {
         - Predictive: Searches keys starting with a query string
      - returns: Sequence.
      */
-    open func search(_ query: String, _ type: MarisaSearchType) -> SearchResults {
+    public func search(_ query: String, _ type: MarisaSearchType) -> SearchResults {
         return SearchResults(context: context!, query: query, type: type)
     }
 
@@ -113,7 +102,7 @@ open class Marisa {
      - parameter query: Search string.
      - returns: true, if found.
      */
-    open func lookup(_ query: String) -> Bool {
+    public func lookup(_ query: String) -> Bool {
         return marisa_lookup(context, query) == 1
     }
 
@@ -121,7 +110,7 @@ open class Marisa {
      Saves dictionary into a file.
      - parameter path: Path to a file.
      */
-    open func save(_ path: String) {
+    public func save(_ path: String) {
         marisa_save(context, path)
     }
 
@@ -129,7 +118,7 @@ open class Marisa {
      Reads dictionary from a file.
      - parameter path: Path to a file.
      */
-    open func load(_ path: String) {
+    public func load(_ path: String) {
         marisa_load(context, path)
     }
 
