@@ -23,9 +23,9 @@ let package = Package(
         // we don't expose any cpp haders here
         .target(
             name: "marisa-trie",
-            sources: ["lib/marisa"],
+            sources: ["marisa"],
             publicHeadersPath: "include",
-            cxxSettings: [.headerSearchPath("lib")]
+            cxxSettings: [.headerSearchPath(".")]
         ),
         .testTarget(
             name: "SwiftyMarisaTests",
