@@ -20,7 +20,6 @@ let package = Package(
             name: "CMarisaWrapper",
             dependencies: ["marisa-trie"]
         ),
-        // we don't expose any cpp haders here
         .target(
             name: "marisa-trie",
             sources: ["marisa"],
