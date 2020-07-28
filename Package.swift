@@ -10,7 +10,6 @@ let package = Package(
             targets: ["SwiftyMarisa"]
         ),
     ],
-    dependencies: [],
     targets: [
         .target(
             name: "SwiftyMarisa",
