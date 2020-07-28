@@ -22,7 +22,6 @@ let package = Package(
         .target(
             name: "marisa-trie",
             sources: ["marisa"],
-            publicHeadersPath: "include",
             cxxSettings: [.headerSearchPath(".")]
         ),
         .testTarget(
