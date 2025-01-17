@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.10
 
 import PackageDescription
 
@@ -13,11 +13,8 @@ let package = Package(
     targets: [
         .target(
             name: "SwiftyMarisa",
-            dependencies: ["CMarisaWrapper"]
-        ),
-        .target(
-            name: "CMarisaWrapper",
-            dependencies: ["marisa-trie"]
+            dependencies: ["marisa-trie"],
+            swiftSettings: [.interoperabilityMode(.Cxx)]
         ),
         .target(
             name: "marisa-trie",
@@ -26,7 +23,8 @@ let package = Package(
         ),
         .testTarget(
             name: "SwiftyMarisaTests",
-            dependencies: ["SwiftyMarisa"]
+            dependencies: ["SwiftyMarisa"],
+            swiftSettings: [.interoperabilityMode(.Cxx)]
         ),
     ]
 )
