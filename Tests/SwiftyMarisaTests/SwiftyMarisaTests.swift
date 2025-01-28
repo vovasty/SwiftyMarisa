@@ -32,7 +32,7 @@ class SwiftyMarisaTests: XCTestCase {
     func testPredictiveSearch() {
         let trie = Marisa()
 
-        trie.build { (builder) -> Void in
+        trie.build { builder in
             builder("U")
             builder("US")
             builder("USA")
@@ -52,7 +52,7 @@ class SwiftyMarisaTests: XCTestCase {
     func testPredictiveSearchEmpty() {
         let trie = Marisa()
 
-        trie.build { (builder) -> Void in
+        trie.build { builder in
             builder("USA")
         }
 
@@ -65,7 +65,7 @@ class SwiftyMarisaTests: XCTestCase {
     func testPrefixSearch() {
         let trie = Marisa()
 
-        trie.build { (builder) -> Void in
+        trie.build { builder in
             builder("U")
             builder("US")
             builder("USA")
@@ -81,7 +81,7 @@ class SwiftyMarisaTests: XCTestCase {
     func testPrefixSearchEmpty() {
         let trie = Marisa()
 
-        trie.build { (builder) -> Void in
+        trie.build { builder in
             builder("UK")
         }
 
@@ -94,7 +94,7 @@ class SwiftyMarisaTests: XCTestCase {
     func testLookup() {
         let trie = Marisa()
 
-        trie.build { (builder) -> Void in
+        trie.build { builder in
             builder("apple")
         }
 

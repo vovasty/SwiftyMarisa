@@ -1,4 +1,4 @@
-//  Marisa.swift
+//  SwiftyMarisa.swift
 //
 //  Copyright (c) 2016, Vladimir Solomenchuk
 //  All rights reserved.
@@ -67,7 +67,7 @@ public final class Marisa {
      - returns: a sequence.
      */
     public func search(_ query: String, _ type: MarisaSearchType) -> AnySequence<String> {
-        return AnySequence(SearchResults(context: context, query: query, type: type))
+        AnySequence(SearchResults(context: context, query: query, type: type))
     }
 
     /**
@@ -76,7 +76,7 @@ public final class Marisa {
      - returns: true, if found.
      */
     public func lookup(_ query: String) -> Bool {
-        return marisa_lookup(context, query) == 1
+        marisa_lookup(context, query) == 1
     }
 
     /**
@@ -110,9 +110,9 @@ private final class SearchResults: Sequence {
     }
 
     func makeIterator() -> AnyIterator<String> {
-        return AnyIterator<String> {
+        AnyIterator<String> {
             var buf: UnsafeMutablePointer<CChar>?
-            var len: Int = 0
+            var len = 0
             guard marisa_search_next(self.searchContext, &buf, &len) == 1 else { return nil }
             guard len > 0 else { return nil }
             guard let b = buf else { return nil }
