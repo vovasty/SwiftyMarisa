@@ -25,8 +25,8 @@
 //  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 //  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-import marisa_trie
 import Foundation
+import marisa_trie
 
 public extension MarisaSearchType {
     // Searches keys from the possible prefixes of a query string.
@@ -106,7 +106,7 @@ private final class SearchResults: Sequence {
     private let searchContext: UnsafeMutablePointer<marisa_search_context>
 
     init(context: UnsafeMutablePointer<marisa_context>, query: String, type: MarisaSearchType) {
-        self.searchContext = marisa_search(context, query, type)
+        searchContext = marisa_search(context, query, type)
     }
 
     func makeIterator() -> AnyIterator<String> {
