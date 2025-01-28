@@ -25,7 +25,7 @@
 //  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 //  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-import CMarisaWrapper
+import marisa_trie
 import Foundation
 
 public extension MarisaSearchType {
@@ -103,10 +103,10 @@ public final class Marisa {
 // MARK: - Private
 
 private final class SearchResults: Sequence {
-    private let searchContext: OpaquePointer
+    private let searchContext: UnsafeMutablePointer<marisa_search_context>
 
-    init(context: OpaquePointer, query: String, type: MarisaSearchType) {
-        searchContext = marisa_search(context, query, type)
+    init(context: UnsafeMutablePointer<marisa_context>, query: String, type: MarisaSearchType) {
+        self.searchContext = marisa_search(context, query, type)
     }
 
     func makeIterator() -> AnyIterator<String> {
