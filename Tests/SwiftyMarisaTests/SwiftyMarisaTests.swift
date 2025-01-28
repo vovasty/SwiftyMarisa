@@ -26,10 +26,11 @@
 //  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import SwiftyMarisa
-import XCTest
+import Testing
 
-class SwiftyMarisaTests: XCTestCase {
-    func testPredictiveSearch() {
+struct SwiftyMarisaTests {
+    @Test
+    func predictiveSearch() {
         let trie = Marisa()
 
         trie.build { builder in
@@ -41,14 +42,15 @@ class SwiftyMarisaTests: XCTestCase {
         var expect = ["U", "US", "USA"]
         var actual = trie.search("U", .predictive).map { $0 }
 
-        XCTAssertEqual(expect, actual)
+        #expect(expect == actual)
 
         expect = ["US", "USA"]
         actual = trie.search("US", .predictive).map { $0 }
 
-        XCTAssertEqual(expect, actual)
+        #expect(expect == actual)
     }
 
+    @Test
     func testPredictiveSearchEmpty() {
         let trie = Marisa()
 
@@ -59,7 +61,7 @@ class SwiftyMarisaTests: XCTestCase {
         let expect = [String]()
         let actual = trie.search("UK", .prefix).map { $0 }
 
-        XCTAssertEqual(expect, actual)
+        #expect(expect == actual)
     }
 
     func testPrefixSearch() {
@@ -75,7 +77,7 @@ class SwiftyMarisaTests: XCTestCase {
         let expect = ["U", "US", "USA"]
         let actual = trie.search("USA", .prefix).map { $0 }
 
-        XCTAssertEqual(expect, actual)
+        #expect(expect == actual)
     }
 
     func testPrefixSearchEmpty() {
@@ -88,7 +90,7 @@ class SwiftyMarisaTests: XCTestCase {
         let expect = [String]()
         let actual = trie.search("USA", .prefix).map { $0 }
 
-        XCTAssertEqual(expect, actual)
+        #expect(expect == actual)
     }
 
     func testLookup() {
@@ -98,7 +100,7 @@ class SwiftyMarisaTests: XCTestCase {
             builder("apple")
         }
 
-        XCTAssert(trie.lookup("apple"))
-        XCTAssertFalse(trie.lookup("microsoft"))
+        #expect(trie.lookup("apple"))
+        #expect(!trie.lookup("microsoft"))
     }
 }
